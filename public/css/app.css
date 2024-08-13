@@ -16,6 +16,17 @@ html {
     #000 40%,
     rgb(41, 5, 141) 100%
   );
+  background-attachment: fixed;
+}
+
+.logo {
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 body {
   padding: 1rem;

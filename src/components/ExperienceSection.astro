@@ -1,0 +1,44 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERINENCE = [
+  {
+    title: "Desarrollador Full-Stack - Innova IT",
+    description: `<p>Gestión de proyectos, desde la concepción hasta la entrega, utilizando tecnologías modernas y metodologías ágiles.</p>
+      <p>Desarrollo de aplicaciones de gestión web y APIs de integración.</p>
+      <p>Creación y configuración de contenedores Docker para microservicios.</p>
+      <p>Analista e integrador de arquitectura de software y metodologías de desarrollo.</p>
+      `,
+    year: "2021 - Actualidad",
+  },
+  {
+    title: "Desarrollador Wordpress - Imaxel",
+    description: `
+    <p>Desarrollo y mantenimiento de plugins para Wordpress multisite.</p> 
+    <p>Mejora en el diseño de la plantilla y la experiencia de usuario.</p>
+    <p>Atención al cliente mediante soporte de ticketing con Zendesk.</p>
+    <p>Despliegue de releases en sistema AWS</p>
+      `,
+    year: "2020 - 2021",
+  },
+  {
+    title: "Desarrollador Aplicaciones - Centres Universitaris Tecnocampus",
+    description: `
+    <p>Gestión de las Bases de Datos Oracle con los datos académicos de la universidad.</p>
+    <p>Desarrollo de aplicaciones web para la gestión de los alumnos y profesores.</p>
+    <p>Creación de una API de integración para unificar los datos de los diferentes sistemas de la universidad.</p>
+    <p>Integración de autenticación, y recuperación de credenciales unificadas contra los servicios de LDAP.</p>
+    <p>Creación de varios sistemas de gestión web para los diferentes departamentos de la universidad.</p>
+    <p>Creación de informes y estadísticas de los datos académicos.</p>
+    <p>Creación de webs promocionales de campañas y departamentos.</p>
+    <p>Analista e integrador de arquitectura de software y metodologías de desarrollo</p>
+      `,
+    year: "2013 - 2020",
+  },
+];
+---
+
+<div class="ml-3 flex items-center">
+  <div class="space-y-6 border-l-2 border-dashed">
+    {EXPERINENCE.map((item) => <ExperienceItem {...item} />)}
+  </div>
+</div>

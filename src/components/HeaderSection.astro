@@ -1,0 +1,73 @@
+---
+import Badge from "./Badge.astro";
+import SocialLink from "./SocialLink.astro";
+import Github from "./icons/Github.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
+import Logo from "./icons/Logo.astro";
+---
+
+<section class={Astro.props.class}>
+  <div>
+    <span class="absolute">👋</span>
+    <h1 class="text-5xl font-bold pb-2">
+      Salu2, soy <span class="text-7xl jumbo-text">Jesús Tirado</span>
+    </h1>
+    <a
+      class="flex items-end cursor-pointer"
+      href="https://linkedin.com/in/jetiradoro"
+      target="_blank"
+      rel="noopener"
+    >
+      <Badge>Dispuesto para colaborar</Badge>
+    </a>
+    <h2 class="text-xl opacity-80 text-wrap mb-3 mt-5">
+      <p class="mb-2">
+        Llevo <b>+12 años</b> disfrutando de la programación web como <b
+          >Full-Stack Developer</b
+        > creando soluciones digitales desde Barcelona, España.
+      </p>
+      <p>
+        Mantengo un enfoque constante en el aprendizaje y la adopción de las
+        tecnologías más actuales para seguir innovando en cada proyecto.
+      </p>
+    </h2>
+
+    <ul class="flex gap-x-2">
+      <li>
+        <SocialLink link="https://github.com/jetiradoro">
+          <Github class="size-6" />
+          Github
+        </SocialLink>
+      </li>
+
+      <li>
+        <SocialLink link="https://linkedin.com/in/jetiradoro">
+          <Linkedin class="size-6" />
+          Linkedin
+        </SocialLink>
+      </li>
+
+      <li>
+        <SocialLink link="mailto:jesus@jetiradoro.com">
+          <Mail class="size-6" />
+          jesus@jetiradoro.com
+        </SocialLink>
+      </li>
+    </ul>
+  </div>
+  <!-- <img class="opacity-25" src="/foto_perfil_transp.png" alt="Foto Jetiradoro" /> -->
+  <Logo class="w-[50rem] logo" />
+</section>
+
+<style>
+  .jumbo-text {
+    background: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

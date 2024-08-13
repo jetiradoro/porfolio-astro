@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import Github from "../components/icons/Github.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Mail from "../components/icons/Mail.astro";
+import SocialLink from "../components/SocialLink.astro";
+import Logo from "../components/icons/Logo.astro";
+---
+
+<Layout
+  title="Porfolio de Jesús Tirado - Desarrollador y Programador Full-Stack"
+>
+  <main>
+    <section
+      class="flex justify-start items-center w-full mx-auto lg:w-[1120px] py-32"
+    >
+      <div>
+        <span>👋</span>
+        <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-4 mb-5">
+          Hey, soy <span class="jumbo-text">Jesús Tirado </span>
+          <a
+            class="flex items-end cursor-pointer"
+            href="https://linkedin.com/in/jetiradoro"
+            target="_blank"
+            rel="noopener"
+          >
+            <Badge>Dispuesto para colaborar</Badge>
+          </a>
+        </h1>
+        <h2 class="text-xl opacity-80 text-wrap mb-3">
+          <p class="mb-2">
+            <b>+12 años</b> disfrutando de la programación web como <b
+              >Full-Stack Developer</b
+            > creando soluciones digitales desde Barcelona, España.
+          </p>
+          <p>
+            Mantengo un enfoque constante en el aprendizaje y la adopción de las
+            tecnologías más actuales para seguir innovando en cada proyecto.
+          </p>
+        </h2>
+
+        <ul class="flex gap-x-2">
+          <li>
+            <SocialLink link="https://github.com/jetiradoro">
+              <Github class="w-6 h-6" />
+              Github
+            </SocialLink>
+          </li>
+
+          <li>
+            <SocialLink link="https://linkedin.com/in/jetiradoro">
+              <Linkedin class="w-6 h-6" />
+              Linkedin
+            </SocialLink>
+          </li>
+
+          <li>
+            <SocialLink link="mailto:jesus@jetiradoro.com">
+              <Mail class="w-6 h-6" />
+              jesus@jetiradoro.com
+            </SocialLink>
+          </li>
+        </ul>
+      </div>
+      <Logo class="w-[50rem]" />
+    </section>
+  </main>
+</Layout>
+<style>
+  .jumbo-text {
+    background: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

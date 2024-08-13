@@ -1,0 +1,30 @@
+:root {
+  color-scheme: light dark;
+  --color-primary: #f0f;
+  --color-secondary: rgb(59 44 255);
+  --color-dark: #333;
+  --color-laravel: #ff2d20;
+  --color-linkedin: #0a66c2;
+  --color-vue: #41b883;
+  --color-node: #68a063;
+  --color-tailwind: #38b2ac;
+}
+html {
+  font-family: "Onest Variable", sans-serif;
+  background: radial-gradient(
+    125% 125% at 50% 10%,
+    #000 40%,
+    rgb(41, 5, 141) 100%
+  );
+}
+body {
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+b {
+  color: var(--color-primary);
+}

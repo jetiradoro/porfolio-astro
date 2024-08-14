@@ -19,10 +19,15 @@ const secondary_color = "var(--color-secondary)";
         style=`stop-color: ${secondary_color}; stop-opacity: 1p`></stop>
     </linearGradient>
   </defs>
+
+  <filter id="shadow">
+    <feDropShadow dx="0" dy="0" stdDeviation="3"></feDropShadow>
+  </filter>
+
   <style>
     .s0 {
-      opacity: 0.6;
       fill: url(#gradient);
+      filter: url(#shadow);
     }
   </style>
   <path

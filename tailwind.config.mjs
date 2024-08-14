@@ -1,5 +1,3 @@
-import Linkedin from "./src/components/icons/Linkedin.astro";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],

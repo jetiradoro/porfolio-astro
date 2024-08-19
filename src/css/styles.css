@@ -22,6 +22,7 @@ html {
   );
   background-attachment: fixed;
   font-family: "Onest Variable", sans-serif;
+  scroll-behavior: smooth;
 }
 
 svg.logo {
@@ -30,7 +31,6 @@ svg.logo {
 }
 
 body {
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -43,4 +43,10 @@ b {
 
 .experience-content p {
   margin-bottom: 0.5rem;
+}
+
+@media (prefers-reduced-motion : reduce){
+  html {
+    scroll-behavior: auto;
+  }
 }

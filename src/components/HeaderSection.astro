@@ -7,11 +7,14 @@ import Mail from "./icons/Mail.astro";
 import Logo from "./icons/Logo.astro";
 ---
 
-<section class={Astro.props.class}>
+<section class="flex items-center flex-wrap-reverse lg:flex-nowrap mb-60">
   <div>
     <span class="absolute">👋</span>
-    <h1 class="text-5xl font-bold pb-2">
-      Salu2, soy <span class="text-7xl jumbo-text">Jesús Tirado</span>
+    <h1
+      class="flex items-center w-full flex-wrap text-5xl font-bold pb-2 text-pretty gap-2 mt-5 lg:mt-2"
+    >
+      <span class="text-3xl md:text-5xl">Salu2, soy</span>
+      <span class="text-7xl jumbo-text text-balance">Jesús Tirado</span>
     </h1>
     <a
       class="flex items-end cursor-pointer"
@@ -21,7 +24,7 @@ import Logo from "./icons/Logo.astro";
     >
       <Badge>Dispuesto para colaborar</Badge>
     </a>
-    <h2 class="text-xl opacity-80 text-wrap mb-3 mt-5">
+    <h2 class="text-xl opacity-80 text-wrap mb-8 mt-5">
       <p class="mb-2">
         Llevo <b>+12 años</b> disfrutando de la programación web como <b
           >Full-Stack Developer</b
@@ -33,7 +36,7 @@ import Logo from "./icons/Logo.astro";
       </p>
     </h2>
 
-    <ul class="flex gap-x-2">
+    <ul class="flex flex-wrap gap-x-2">
       <li>
         <SocialLink link="https://github.com/jetiradoro">
           <Github class="size-6" />
@@ -57,7 +60,7 @@ import Logo from "./icons/Logo.astro";
     </ul>
   </div>
   <!-- <img class="opacity-25" src="/foto_perfil_transp.png" alt="Foto Jetiradoro" /> -->
-  <Logo class="w-[50rem] logo" />
+  <Logo class="w-[25rem] lg:w-[50rem] logo mx-auto mb-10 xl:mb-0" />
 </section>
 
 <style>

@@ -1,10 +1,12 @@
 ---
 interface Props {
+  id: string;
   title: string;
   description: string;
   year: string;
+  summary: string;
 }
-const { title, description, year } = Astro.props;
+const { title, description, year, summary, id } = Astro.props;
 ---
 
 <div class="relative">
@@ -13,11 +15,22 @@ const { title, description, year } = Astro.props;
   >
   </div>
   <div class="ml-6">
+    <span class="mt-1 block text-sm font-semibold text-primary">{year}</span>
     <h4 class="text-xl font-bold text-blue-500">{title}</h4>
+    <span>{summary}</span>
     <div
-      class="mt-2 max-w-screen-lg experience-content text-gray-300 text-pretty"
+      id={id}
+      class="mt-2 max-w-screen-lg experience-content text-gray-300 text-pretty hidden"
       set:html={description}
     />
-    <span class="mt-1 block text-sm font-semibold text-blue-500">{year}</span>
+    <button
+      class="rounded-full border dark:border-white/10 border-dark/10 block mt-2 py-2 px-4 mb-3 gap-x-2 bg-white/5 hover:bg-white/15 hover:scale-105 transition"
+      >Ver más</button
+    >
   </div>
 </div>
+<style>
+  button:active ~ #imaxel {
+    display: block;
+  }
+</style>

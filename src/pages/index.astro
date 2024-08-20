@@ -4,6 +4,7 @@ import HeaderSection from "../components/HeaderSection.astro";
 import ExperienceSection from "../components/experience/ExperienceSection.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import AboutMe from "../components/icons/AboutMe.astro";
 ---
 
 <Layout
@@ -11,7 +12,7 @@ import SectionContainer from "../components/SectionContainer.astro";
   description="Porfolio profesional de Jesús Tirado. Desarollador de aplicaciones web, APIs de integración durante más de 15 años."
 >
   <main class="px-5">
-    <SectionContainer id="top" class="py-20 lg:py-44 pb-24">
+    <SectionContainer id="top" class="py-20 lg:py-44 mb-40">
       <HeaderSection />
     </SectionContainer>
 
@@ -20,6 +21,37 @@ import SectionContainer from "../components/SectionContainer.astro";
         <Briefcase class="size-7" /> Experiencia profesional
       </h2>
       <ExperienceSection class="ml-3" />
+    </SectionContainer>
+
+    <SectionContainer id="about-me" class="my-20">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <AboutMe class="size-7" /> Algo sobre mí
+      </h2>
+      <section class="flex flex-col gap-3">
+        <p>
+          Soy una persona apasionada por el aprendizaje continuo, siempre en
+          busca de las últimas mejoras y tecnologías en mi sector. Disfruto
+          investigando, experimentando, y aplicando lo que aprendo. Además,
+          cuando surge la oportunidad, me encanta compartir mis conocimientos a
+          través de tutoriales y sesiones con aprendices y becarios, ayudándoles
+          a crecer en sus propios caminos.
+        </p>
+        <p>
+          Me considero meticuloso y profesional, abordando cada reto con
+          dedicación y una buena dosis de perseverancia 💪. Pongo toda mi
+          energía en alcanzar mis objetivos, siempre con el propósito de mejorar
+          y perfeccionar los resultados, buscando la máxima satisfacción en cada
+          logro.
+        </p>
+        <p>
+          En mi tiempo libre, me encanta disfrutar de mis paseos en moto 🏍️, soy
+          un cinéfilo empedernido, y me fascinan las excursiones por la montaña
+          ⛰️. Valoro mucho el tiempo con mi familia y mis hijos 💚, así como con
+          mi grupo de amigos. Juntos, cuando el tiempo lo permite 😅, nos
+          dedicamos a disfrutar de actividades como Scape Rooms, escapadas de
+          fin de semana, y otras aventuras de ocio.
+        </p>
+      </section>
     </SectionContainer>
   </main>
 </Layout>

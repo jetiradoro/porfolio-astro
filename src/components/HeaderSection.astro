@@ -5,6 +5,7 @@ import Github from "./icons/Github.astro";
 import Linkedin from "./icons/Linkedin.astro";
 import Mail from "./icons/Mail.astro";
 import Logo from "./icons/Logo.astro";
+import Download from "./icons/Download.astro";
 const year = new Date().getFullYear();
 const experience = year - 2012;
 ---
@@ -59,6 +60,13 @@ const experience = year - 2012;
         <SocialLink link="https://linkedin.com/in/jetiradoro">
           <Linkedin class="size-6" />
           Linkedin
+        </SocialLink>
+      </li>
+
+      <li>
+        <SocialLink link="/cv_linkedin.pdf">
+          <Download class="size-6" />
+          CV
         </SocialLink>
       </li>
 

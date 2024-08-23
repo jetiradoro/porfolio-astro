@@ -16,21 +16,12 @@ const { title, description, year, summary, id } = Astro.props;
   </div>
   <div class="ml-6">
     <span class="mt-1 block text-sm font-semibold text-primary">{year}</span>
-    <h4 class="text-xl font-bold text-blue-500">{title}</h4>
-    <span>{summary}</span>
+    <h3 class="text-xl font-bold text-blue-500">{title}</h3>
+    <span class="my-5 block">{summary}</span>
     <div
       id={id}
-      class="mt-2 max-w-screen-lg experience-content text-gray-300 text-pretty hidden"
+      class="mt-5 max-w-screen-lg experience-content text-gray-300 text-pretty"
       set:html={description}
     />
-    <button
-      class="rounded-full border dark:border-white/10 border-dark/10 block mt-2 py-2 px-4 mb-3 gap-x-2 bg-white/5 hover:bg-white/15 hover:scale-105 transition"
-      >Ver más</button
-    >
   </div>
 </div>
-<style>
-  button:active ~ #imaxel {
-    display: block;
-  }
-</style>

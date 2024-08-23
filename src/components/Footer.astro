@@ -1,3 +1,39 @@
-<footer class="bg-black/70 mt-20 py-5 flex items-center gap-4 justify-center">
-  &reg ChuskyDev 2024
+---
+const year = new Date().getFullYear();
+import SocialLink from "./SocialLink.astro";
+import Github from "./icons/Github.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
+---
+
+<footer class="bg-black/70 mt-20 py-5">
+  <section
+    class="flex items-center justify-between gap-4 px-3 m-auto w-full xl:w-[1280px]"
+  >
+    &reg ChuskyDev {year}
+
+    <ul class="flex flex-wrap gap-x-2">
+      <li>
+        <a href="https://github.com/jetiradoro" target="_blank" rel="noopener">
+          <Github class="size-6" />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://linkedin.com/in/jetiradoro"
+          target="_blank"
+          rel="noopener"
+        >
+          <Linkedin class="size-6" />
+        </a>
+      </li>
+
+      <li>
+        <a href="mailto:jesus@jetiradoro.com" target="_blank" rel="noopener">
+          <Mail class="size-6" />
+        </a>
+      </li>
+    </ul>
+  </section>
 </footer>

@@ -5,6 +5,8 @@ import Github from "./icons/Github.astro";
 import Linkedin from "./icons/Linkedin.astro";
 import Mail from "./icons/Mail.astro";
 import Logo from "./icons/Logo.astro";
+const year = new Date().getFullYear();
+const experience = year - 2012;
 ---
 
 <section class="flex items-center flex-wrap-reverse lg:flex-nowrap">
@@ -13,7 +15,7 @@ import Logo from "./icons/Logo.astro";
     <h1
       class="flex items-center w-full flex-wrap text-5xl font-bold pb-2 text-pretty gap-2 mt-5 lg:mt-2"
     >
-      <span class="text-3xl md:text-5xl">Salu2, soy</span>
+      <span class="text-3xl md:text-5xl">Soy</span>
       <span class="text-6xl md:text-7xl jumbo-text text-balance"
         >Jesús Tirado</span
       >
@@ -24,19 +26,26 @@ import Logo from "./icons/Logo.astro";
       target="_blank"
       rel="noopener"
     >
-      <Badge>Dispuesto para colaborar</Badge>
+      <Badge>
+        <div class="inline-flex items-center gap-2">
+          <div class="bg-green-600 size-2 rounded-full"></div>
+          Dispuesto para colaborar
+        </div>
+      </Badge>
     </a>
-    <h2 class="text-xl opacity-80 text-wrap mb-8 mt-5">
+    <section class="text-xl opacity-80 text-wrap mb-8 mt-5">
       <p class="mb-2">
-        Llevo <b>+12 años</b> disfrutando de la programación web como <b
-          >Desarrollador Full-Stack</b
-        > creando soluciones digitales desde Barcelona, España.
+        Llevo <b>+{experience} años</b> disfrutando del <b
+          >Desarrollo de software web</b
+        > principalmente como <b>backend</b> pero siempre combinando también con
+        la programación <b>frontend</b>. creando soluciones digitales desde
+        Barcelona, España.
       </p>
       <p>
         Mantengo un enfoque constante en el aprendizaje y la adopción de las
         tecnologías más actuales para seguir innovando en cada proyecto.
       </p>
-    </h2>
+    </section>
 
     <ul class="flex flex-wrap gap-x-2">
       <li>

@@ -11,8 +11,17 @@ export default {
         laravel: "var(--color-laravel)",
         vue: "var(--color-vue)",
         linkedin: "var(--color-linkedin)",
+        node: "var(--color-node)",
+        tailwind: "var(--color-tailwind)",
+        sass: "var(--color-sass)",
+        quasar: "var(--color-quasar)",
+      },
+       textShadow: {
+        'lg': '0 2px 4px rgba(0, 0, 0, 0.5)',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow'),
+  ],
 };

@@ -1,11 +1,28 @@
-<header class="py-5 w-full xl:w-[1120px] mx-auto">
+---
+import Briefcase from "./icons/Briefcase.astro";
+import Code from "./icons/Code.astro";
+import Mail from "./icons/Mail.astro";
+import Home from "./icons/Home.astro";
+import UserIcon from "./icons/UserIcon.astro";
+---
+
+<header class="py-5 w-full xl:w-[1280px] mx-auto">
   <nav
-    class="flex flex-row items-center justify-center flex-wrap px-3 gap-x-3 sm:gap-x-5 opacity-80"
+    class="flex flex-row items-center flex-wrap px-3 gap-x-3 gap-y-3 sm:gap-x-5 opacity-80"
   >
-    <a href="#top">Inicio</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#about-me">Sobre mí</a>
-    <a href="#contact">Contacto</a>
+    <a class="flex items-center gap-x-1" href="#top">
+      <Home class="size-5" />
+      Inicio
+    </a>
+    <a class="flex items-center gap-x-1" href="#experience"
+      ><Briefcase class="size-5" /> Experiencia</a
+    >
+    <a class="flex items-center gap-x-1" href="#projects"
+      ><Code class="size-5" /> Proyectos</a
+    >
+    <a class="flex items-center gap-x-1" href="#about-me">
+      <UserIcon class="size-5" />
+      Sobre mí
+    </a>
   </nav>
 </header>

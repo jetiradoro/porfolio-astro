@@ -1,0 +1,88 @@
+---
+import Laravel from "../icons/Laravel.astro";
+import Node from "../icons/Node.astro";
+import Vue from "../icons/Vue.astro";
+import ProjectItem from "./ProjectItem.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Sass from "../icons/Sass.astro";
+import Quasar from "../icons/Quasar.astro";
+
+const TAGS = {
+  NODE: {
+    name: "Node",
+    class: "hover:border-node",
+    icon: Node,
+  },
+
+  LARAVEL: {
+    name: "Laravel",
+    class: "hover:border-laravel",
+    icon: Laravel,
+  },
+
+  VUE: {
+    name: "Vue",
+    class: "hover:border-vue",
+    icon: Vue,
+  },
+
+  TAILWIND: {
+    name: "Tailwind",
+    class: "hover:border-tailwind",
+    icon: Tailwind,
+  },
+
+  SASS: {
+    name: "Sass",
+    class: "hover:border-sass",
+    icon: Sass,
+  },
+
+  QUASAR: {
+    name: "Quasar",
+    class: "hover:border-quasar",
+    icon: Quasar,
+  },
+};
+
+const PROJECTS = [
+  {
+    imageLink: "/images/projects/epolca_project.webp",
+    imageName: "ePolca",
+    title: "EPolca",
+    tags: [TAGS.LARAVEL, TAGS.VUE, TAGS.SASS, TAGS.NODE],
+    description: `
+    <p>Aplicación de empresa. Con el objetivo de gestionar y planificar la entrega de los pedidos de la fábrica</p>
+      <p>En este proyecto he participado desde la definición y mejora contínua de la arquitectura, la documentación,
+      programación, y supervisión de equipo de desarrollo </p>
+      `,
+  },
+  {
+    imageLink: "/images/projects/lucius_project.webp",
+    imageName: "Lucius App",
+    title: "Lucius App",
+    tags: [TAGS.LARAVEL, TAGS.VUE, TAGS.QUASAR],
+    description: `<p>Aplicación para la gestión de eventos y participación en una colla de Batukadas.</p>
+      <p>Proyecto personal desarrollado en 2 aplicaciones. Frontend y Backend. La parte de gestión, de mantenimiento de usuarios, instrumentos y eventos, desarrollada en Laravel con control de usuario de acceso.</p>
+      <p>Y la parte de frontend es una <b>PWA</b>
+      desarrollada en Quasar para que cada participante pueda acceder y gestionar su participación en cada evento con una aplicación instalada en el movil.</p>
+      `,
+  },
+
+  {
+    imageLink: "/images/projects/api_project.webp",
+    imageName: "API Example",
+    title: "Plantilla de API",
+    tags: [TAGS.NODE],
+    git: "https://github.com/jetiradoro/api-node",
+    description: `<p>API desarrollada en Node y Express con autenticación Bearer y documentación Swagger y Redoc.</p>
+      <p>Proyecto personal para disponer de una plantilla de despliegue rápido para crear una API basada en Node</p>
+      <p>Dispone de conector de base de datos con Knex, pruebas unitarias con Jest y documentación con Swagger a través de exportación Postman</p>
+      `,
+  },
+];
+---
+
+<section class="flex flex-wrap justify-normal gap-10">
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
+</section>

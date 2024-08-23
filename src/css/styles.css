@@ -12,6 +12,8 @@
   --color-vue: #41b883;
   --color-node: #68a063;
   --color-tailwind: #38b2ac;
+  --color-sass: #ff6600;
+  --color-quasar: #1976d2;
 }
 
 html {
@@ -43,6 +45,18 @@ b {
 
 .experience-content p {
   margin-bottom: 0.5rem;
+}
+
+.shinny {
+  background: url("/images/brillo.webp") no-repeat -100px;
+}
+.shinny:hover {
+  background-position-x: 300px;
+  transition: background-position-x 1s ease-in-out;
+}
+
+p{
+  margin-bottom: 30px;
 }
 
 @media (prefers-reduced-motion : reduce){

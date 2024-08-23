@@ -1,0 +1,71 @@
+---
+import Github from "../icons/Github.astro";
+
+const { title, description, tags, imageLink, imageName, git } = Astro.props;
+---
+
+<card
+  class="w-full border rounded-md p-3 flex flex-col bg-cover bg-center bg-no-repeat"
+  style={`background-image: url(${imageLink})`}
+>
+  <h3 class="text-3xl font-extrabold drop-shadow-md text-blue-500 mt-2">
+    <span class="flex gap-2 items-center">
+      {title}
+      <a class=`text-white ${git ? "" : "hidden"}` href={git} target="_blank">
+        <Github class="size-6" /></a
+      >
+    </span>
+  </h3>
+  <div class="max-w-md bg-dark-500">
+    <p class="text-shadow-lg" set:html={description} />
+  </div>
+  <ul class="flex items-center flex-wrap gap-2 mt-auto">
+    {
+      tags.map((tag: any) => (
+        <li
+          class={`${tag.class} shinny  border bg-opacity-20 rounded-full flex justify-center items-center gap-1 py-1 px-3 text-xs`}
+        >
+          <tag.icon class="size-4" />
+          <span>{tag.name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</card>
+
+<style>
+  @keyframes show-projects {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  card {
+    transition: all 0.3s ease-in-out;
+    view-timeline-name: --project;
+    view-timeline-axis: block;
+    animation-timeline: --project;
+    animation-range: entry 25% cover 50%;
+    animation-name: show-projects;
+
+    animation-fill-mode: both;
+  }
+  card:hover {
+    box-shadow: 0 0 40px var(--color-primary);
+  }
+
+  li {
+    transition: border-color 0.3s linear;
+    cursor: pointer;
+  }
+
+  li:hover {
+    & span {
+      transition: border-color 2s linear;
+    }
+  }
+</style>
